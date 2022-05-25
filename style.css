@@ -1,35 +1,105 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 * {
-    margin: 0 auto; /** automatimamente centralizado **/ 
-    padding: 0;    /**Define uma a distância entre o conteúdo de um elemento e suas bordas **/
-    box-sizing: border-box; /** pixel aumento **/ 
-    font-family: 'Open Sans', sans-serif;
-}
-#menu-h{
-    background-color: rgb(37, 37, 39); /** estilização de um plano de fundo**/
-}
-#menu-h ul {
-    max-width: 800px; /** Estabelece a largura máxima de um elemento.**/
-    list-style: none;
     padding: 0;
-}
-#menu-h ul li {
-    display: inline; /** uma ao lado do outro **/
-}
-menu-h ul li a { /** links com ancoras **/
-    color: #FFF;
-    padding: 20px;
-    display: inline-block; /** quando passa o mouse no link utilize toda area.  **/
-    text-decoration: none;
-    transition: background .4s;
-}
+    margin: 0;
+  }
+  .container {
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr;
+    grid-auto-rows: minmax(45px, auto);
+    gap: 3px; 
+   }
+  .item {
+    height: auto;
+    background-color: #bbb;
+    border: 1px solid black;  
+  } 
+  .item1 {
+    grid-column: 1/4; 
+   }
+   nav{
+    width: 100%;
+    
+  }
+  .menu{
+    font-family: "impact";
+    font-size: 12pt;
+    
+  
+  }
+  .menu ul{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    
+  }
+  .menu ul li{
+  
+    padding: 8px;
+    flex-grow: 1;
+    transition: background-color .2s linear;
+    border: solid 1px transparent;
+    
+  }
+  .menu ul li a{
+    text-decoration:none;
+    color: #f2f2f2;
+    }
+  .menu ul li:hover{
+    border: solid 1px #fff;
+    background-color:transparent !important;
+    cursor: pointer;
+  }
+  #item1{
+    background-color: #f0f;
+  }
+  #item2{
+    background-color: #3ADF00;
+  }
+  #item3{
+    background-color: #2ECCFA;
+  }
+  #item4{
+    background-color: #f00;
+  }
+  #item5{
+    background-color: #9F81F7;
+  }
+  @media (max-width: 520px) {
+   .menu ul{
+     display:block;
+   }
+  
+  }
 
-#menu-h ul li a:hover {  /** decoração do link quando passar mouse no link, muda a cor **/
-    background-color: rgb(24, 139, 233);
-}
 
-#menu-h ul li:last-child a {  /** Representa qualquer elemento que é o último filho de seu elemento pai.**/
-    float: right;
-    background-color: rgb(24, 139, 233);
-}
+  .item2 {
+    background-color: #3ADF00;
+    grid-column: 2/4;
+    grid-row: 2/12;
+    padding: 12px; 
+    
+   }
+  .item3 {
+    background-color: #00a0df;
+    grid-row: 2/4;
+    grid-row: 2/12;
+   }
+  .item4 {
+    background-color: aqua;
+    grid-column: 1/4; 
+   }
+  @media(max-width: 768px){
+      .item2{
+          grid-column: 1/4 ;
+          grid-row: 2/auto;    
+          }
+      .item3{
+        grid-column: 1/4 ;
+        grid-row: 3 / auto;    
+        }
+       }
+
+  
