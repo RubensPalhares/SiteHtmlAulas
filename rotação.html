@@ -1,0 +1,97 @@
+<!doctype html class="my-2 rounded-full h-10 w-[16rem] px-4">
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>3D Rotação</title>
+</head>
+
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+        font-size: 120%;
+        background: #161724;
+        overflow-y: hidden;
+        font-family: lato;
+    }
+
+    body {
+        position: relative;
+    }
+
+    .box {
+        width: 100%;
+        height: 100vh;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 3rem;
+        color: #f7f9fa;
+        padding: 2rem;
+        transition: all .5s;
+        position: relative;
+        perspective: 30rem;
+    }
+
+    a::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 4.2rem;
+        left: 0;
+        background: #e6036d34;
+        border-radius: 1.5rem;
+        transform: rotateX(80deg);
+        z-index: 2;
+    }
+
+    a::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #e6036e;
+        border-radius: 1.5rem;
+        z-index: -1;
+    }
+
+    a:hover::before {
+        animation: rotate 1s;
+        transition: all .5s;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotatey(180deg);
+        }
+
+        100% {
+            transform: rotatey(360deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="box">
+        <a href="#">3D Rotação Funec </a>
+    </div>
+</body>
+
+</html>
